@@ -1,3 +1,6 @@
-<h1>
-  {{title}}
-</h1>
+<input type="text" [(ngModel)]="searchText" placeholder="Enter the user's First and Last name" />
+<button (click)="search()">Search</button>
+<h3>Email: {{ searchResult || 'N/A' }} </h3>
+<ul>
+	<li *ngFor="let name of classListKeys"> {{ name }} </li>
+</ul>
